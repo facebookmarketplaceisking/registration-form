@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PSG College Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container glass">
+        <h1>PSG COLLEGE ARTS AND SCIENCE</h1>
+        <center><p>Avinashi Rd, Peelamedu, Coimbatore, Tamil Nadu - 641004</p></center>
+        
+        <h2>REGISTRATION FORM</h2>
+        <form id="registrationForm" action="save_data.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="education">Education Qualification</label>
+            <select id="education" name="education_qualification" required>
+                <option value="">Select</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Postgraduate">Postgraduate</option>
+                <option value="PhD">PhD</option>
+            </select>
+
+            <label for="year">Year</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="dob">D.O.B</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender</label>
+            <input type="radio" id="male" name="gender" value="Male" required> Male
+            <input type="radio" id="female" name="gender" value="Female" required> Female
+
+            <label for="college">College Name</label>
+            <input type="text" id="college" name="college_name" required>
+
+            <label for="phone">Phone No</label>
+            <input type="text" id="phone" name="phone_no" pattern="\d{10}" maxlength="10" required>
+
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email_id" required>
+
+            <label for="events">No. Of Events</label>
+            <div id="events">
+                <input type="checkbox" name="events[]" value="Debug" class="event-checkbox"> Debug
+                <input type="checkbox" name="events[]" value="Webpage" class="event-checkbox"> Webpage
+                <input type="checkbox" name="events[]" value="Ethical Hacking" class="event-checkbox"> Ethical Hacking
+                <input type="checkbox" name="events[]" value="Query Breakout" class="event-checkbox"> Query Breakout
+                <input type="checkbox" name="events[]" value="Paper Presentation" class="event-checkbox"> Paper Presentation
+                <input type="checkbox" name="events[]" value="Puzzles" class="event-checkbox"> Puzzles
+                <input type="checkbox" name="events[]" value="Quiz" class="event-checkbox"> Quiz
+                <input type="checkbox" name="events[]" value="Hackathon" class="event-checkbox"> Hackathon
+            </div>
+
+            <label for="registration_date">Date Of Registration</label>
+            <input type="date" id="registration_date" name="date_of_registration" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
